@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.mycompany.lavidadamuchasvueltas_los4bandoleros","l":"Main"},{"p":"FuncionesPersonas","l":"Nombre"}]
