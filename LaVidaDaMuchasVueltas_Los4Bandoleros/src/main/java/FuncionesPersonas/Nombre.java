@@ -9,121 +9,103 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
+ * En esta clase creamos una función llamada nombreAleatorio que recibe por
+ * argumentos un género y devuelve un nombre aleatorio entre un conjunto de
+ * opciones distintas dependiendo de si el género es hombre o mujer
  *
  * @author noemi
+ * @version 1.0
  */
 public class Nombre {
 
-    public static void nombreAleatorio() {
+    public static String nombreAleatorio(String genero) {
         Scanner sc = new Scanner(System.in);
         Random ran = new Random();
-        byte nPerson;
-
-        /*NÚMERO PERSONAS*/
-        System.out.println("¿Cuántas personas quieres generar?");
+        /**
+         * La variable nombre tipo String almacena el género que el usuario
+         * intriduce por teclado, por eso la declaramos vacía.
+         */
+        String nombre = "";
+        /**
+         * Este sout imprime el String genero, al cual se le da valor en el Main
+         * de la clase principal.
+         */
+        System.out.println(genero);
+        /**
+         * Este DoWhile pedirá al usuaio tantas veces sea necesario que
+         * introduzca su género hasta que sea igual a "femenino" o "masculino".
+         */
         do {
-            nPerson = Byte.parseByte(sc.nextLine());
-            if (nPerson < 1 || nPerson > 5) {
-                System.out.println("¡Mínimo 1 y máximo 5!");
-            }
-        } while (nPerson < 1 || nPerson > 5);
-
-        for (int i = 1; i <= nPerson; i++) {
-            System.out.println(i + "º Persona:");
+            nombre = sc.nextLine();
             /**
-             * *********DNI**********
+             * Con .equalsIgnoreCase() conseguimos que obvie las mayúsculas y
+             * así nos ahorramos el tener que especificar las 4 opciones
+             * posibles como por ejemplo "femenino" y "Femenino"
              */
-            /*NÚMERO*/
-            System.out.print("\tDNI ");
-            for (int j = 0; j < 8; j++) {
-                int dniN = ran.nextInt(9);
-                System.out.print(dniN);
+            if (!nombre.equalsIgnoreCase("mujer") && !nombre.equalsIgnoreCase("hombre")) {
+                System.out.println("Escriba su género por favor");
             }
+        } while (!nombre.equalsIgnoreCase("mujer") && !nombre.equalsIgnoreCase("hombre"));
 
-            /*LETRA*/
-            char dniL = (char) (ran.nextInt(90 - 65) + 'A');
-
-            System.out.println(dniL);
-
-            /**
-             * *********GÉNERO**********
-             */
-            boolean genero = ran.nextBoolean();
-            if (genero == true) {
-                System.out.println("\tGÉNERO Hombre");
-                /**
-                 * *********NOMBRE**********
-                 */
-                /*HOMBRE*/
-                System.out.print("\tNOMBRE ");
-                byte nombreH = (byte) ran.nextInt(5);
-                switch (nombreH) {
-                    case 0:
-                        System.out.print("Alejandro ");
-                        break;
-                    case 1:
-                        System.out.print("Juan ");
-                        break;
-                    case 2:
-                        System.out.print("Jorge ");
-                        break;
-                    case 3:
-                        System.out.print("Pedro ");
-                        break;
-                    case 4:
-                        System.out.print("Mariano ");
-                        break;
-                }
-            } else {
-                System.out.println("\tGÉNERO Mujer");
-                /*MUJER*/
-                System.out.print("\tNOMBRE ");
-                byte nombreM = (byte) ran.nextInt(5);
-                switch (nombreM) {
-                    case 0:
-                        System.out.print("Raquel ");
-                        break;
-                    case 1:
-                        System.out.print("Marta ");
-                        break;
-                    case 2:
-                        System.out.print("Sandra ");
-                        break;
-                    case 3:
-                        System.out.print("Esther ");
-                        break;
-                    case 4:
-                        System.out.print("Rocío ");
-                        break;
-                }
-            }
-            /**
-             * *********APELLIDO**********
-             */
-            byte apellido = (byte) ran.nextInt(5);
-            switch (apellido) {
+        /**
+         * Si el valor de la variable nombre de tipo String es igual a "hombre"
+         * elegirá de forma aleatoria un nombre entre los case del switch.
+         */
+        if (nombre.equalsIgnoreCase("hombre")) {
+            System.out.print("Nombre ");
+            byte nombreH = (byte) ran.nextInt(6);
+            switch (nombreH) {
                 case 0:
-                    System.out.println("Ramírez");
+                    System.out.print("Pedro ");
                     break;
                 case 1:
-                    System.out.println("González");
+                    System.out.print("Isaac ");
                     break;
                 case 2:
-                    System.out.println("Carrión");
+                    System.out.print("Luís ");
                     break;
                 case 3:
-                    System.out.println("Piñas");
+                    System.out.print("Manuel ");
                     break;
                 case 4:
-                    System.out.println("Peña");
+                    System.out.print("Abrahán ");
+                    break;
+                case 5:
+                    System.out.print("Paco ");
                     break;
             }
-            /**
-             * *********EDAD**********
-             */
-            int edad = ran.nextInt(90 - 18) + 0;
-            System.out.println("\tEDAD " + edad);
+        } 
+        /**
+         * Si el valor de la variable nombre de tipo String es igual a "mujer"
+         * elegirá de forma aleatoria un nombre entre los case del switch.
+         */
+        else if (nombre.equalsIgnoreCase("mujer")) {
+            System.out.print("Nombre ");
+            byte nombreM = (byte) ran.nextInt(6);
+            switch (nombreM) {
+                case 0:
+                    System.out.print("Toñi ");
+                    break;
+                case 1:
+                    System.out.print("Sarai ");
+                    break;
+                case 2:
+                    System.out.print("Mari ");
+                    break;
+                case 3:
+                    System.out.print("Ana ");
+                    break;
+                case 4:
+                    System.out.print("Loli ");
+                    break;
+                case 5:
+                    System.out.print("Paqui ");
+                    break;
+            }
         }
+        /**
+         * Esta función no devuelve nada.
+         */
+        return null;
     }
-
 }
