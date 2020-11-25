@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.mycompany.lavidadamuchasvueltas_los4bandoleros"},{"l":"FuncionesPersonas"}]

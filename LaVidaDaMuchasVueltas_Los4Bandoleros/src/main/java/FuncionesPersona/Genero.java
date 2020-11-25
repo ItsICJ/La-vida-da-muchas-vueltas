@@ -19,7 +19,7 @@ public class Genero {
         boolean generoAleatorio = ran.nextBoolean();
 
         if (generoAleatorio) {
-            System.out.println("\tGENERO: Hombre");
+            System.out.println("\tGENERO: Mujer");
         } else {
             System.out.println("\tGENERO: Mujer");
         }

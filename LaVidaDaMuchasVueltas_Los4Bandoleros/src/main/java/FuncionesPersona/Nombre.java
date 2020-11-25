@@ -20,14 +20,14 @@ public class Nombre {
 
     public static String nombreAleatorio() {
         
-        String nombre = generoAleatorio();
+        boolean genero = Boolean.parseBoolean(generoAleatorio());
         Random ran = new Random();
       
         int nombreAleatorio = ran.nextInt(5);
         
-        if (String.valueOf(nombre)) {
+        if (genero) {
             
-            System.out.print("\tNOMBRE ");
+            System.out.print("\tNOMBRE: ");
             
             switch (nombreAleatorio) {//Nombre aleatorio.
                 case 0 ->
@@ -44,7 +44,7 @@ public class Nombre {
             
         } else {//Género mujer.
             
-            System.out.print("\tNOMBRE ");
+            System.out.print("\tNOMBRE: ");
             switch (nombreAleatorio) {//Nombre aleatorio.
                 case 0 ->
                     System.out.print("Noemí ");
