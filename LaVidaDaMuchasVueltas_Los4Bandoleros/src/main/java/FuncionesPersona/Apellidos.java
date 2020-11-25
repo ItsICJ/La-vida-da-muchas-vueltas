@@ -18,6 +18,7 @@ public class Apellidos {
         Random ran = new Random();
         int apellidoAleatorio = ran.nextInt(5);
 
+        System.out.print("\tAPELLIDO: ");
         switch (apellidoAleatorio) {//Apellido aleatorio.
             case 0 ->
                 System.out.print("Martín");
