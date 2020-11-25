@@ -5,7 +5,11 @@
  */
 package com.mycompany.lavidadamuchasvueltas_los4bandoleros;
 
-import static FuncionesPersonas.Nombre.nombreAleatorio;
+import static FuncionesPersona.Nombre.nombreAleatorio;
+import static FuncionesPersona.Genero.generoAleatorio;
+import static FuncionesPersona.Apellidos.apellidosAleatorio;
+
+import java.util.Random;
 
 /**
  *
@@ -17,6 +21,10 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String nombreYo=nombreAleatorio("A continuación, escriba su género");
+
+        String nombreYo = nombreAleatorio();
+        String generoYo = generoAleatorio();
+        String apellidoYo = apellidosAleatorio();
+
     }
 }
