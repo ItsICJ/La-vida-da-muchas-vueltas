@@ -21,9 +21,8 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        Boolean generoYo = generoAleatorio();
         String nombreYo = nombreAleatorio();
-        String generoYo = generoAleatorio();
         String apellidoYo = apellidosAleatorio();
 
     }

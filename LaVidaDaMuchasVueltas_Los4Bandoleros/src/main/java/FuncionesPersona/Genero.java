@@ -13,18 +13,11 @@ import java.util.Random;
  */
 public class Genero {
 
-    public static String generoAleatorio() {
+    public static Boolean generoAleatorio() {
 
         Random ran = new Random();
         boolean generoAleatorio = ran.nextBoolean();
 
-        if (generoAleatorio) {
-            System.out.println("\tGENERO: Mujer");
-        } else {
-            System.out.println("\tGENERO: Mujer");
-        }
-        return null;
-
+        return generoAleatorio;
     }
-
 }
