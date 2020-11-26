@@ -143,7 +143,7 @@ public class FuncionesPersona {
 
     /**
      * Esta función devuelve, concatenada en un String, toda la información de
-     * una persona.
+     * una persona..
      *
      * @param nombre
      * @param apellidos
