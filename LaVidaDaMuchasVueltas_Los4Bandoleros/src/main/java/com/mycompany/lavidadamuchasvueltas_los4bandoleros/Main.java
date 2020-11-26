@@ -28,31 +28,31 @@ public class Main {
         String nombrePapa = nombreAleatorio(generoPapa);
         String apellidosPapa = apellidoAleatorio() + " " + apellidoAleatorio();
         
-        int sociabilidadPapa;
-        int empatiaPapa;
-        int inteligenciaPapa;
-        int velocidadPapa;
-        int fuerzaPapa;
+        byte sociabilidadPapa;
+        byte empatiaPapa;
+        byte inteligenciaPapa;
+        byte velocidadPapa;
+        byte fuerzaPapa;
 
         Boolean generoMama = generoAleatorio();
         String nombreMama = nombreAleatorio(generoMama);
         String apellidosMama = apellidoAleatorio() + " " + apellidoAleatorio();
         
-        int sociabilidadMama;
-        int empatiaMama;
-        int inteligenciaMama;
-        int velocidadMama;
-        int fuerzaMama;
+        byte sociabilidadMama;
+        byte empatiaMama;
+        byte inteligenciaMama;
+        byte velocidadMama;
+        byte fuerzaMama;
 
         Boolean generoYo = generoAleatorio();
         String nombreYo = nombreAleatorio(generoYo);
         String apellidoYo = apellidoAleatorio() + " " + apellidoAleatorio();
 
-        int sociabilidadMaxYo;
-        int empatiaMaxYo;
-        int inteligenciaMaxYo;
-        int velocidadMaxYo;
-        int fuerzaMaxYo;
+        byte sociabilidadMaxYo;
+        byte empatiaMaxYo;
+        byte inteligenciaMaxYo;
+        byte velocidadMaxYo;
+        byte fuerzaMaxYo;
 
     }
 }
