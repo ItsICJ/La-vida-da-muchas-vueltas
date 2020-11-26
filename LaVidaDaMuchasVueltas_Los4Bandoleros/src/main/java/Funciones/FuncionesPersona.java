@@ -39,25 +39,24 @@ public class FuncionesPersona {
      */
     public static String nombreAleatorio(boolean genero) {
         Random ran = new Random();
-
         int nombreAleatorio = ran.nextInt(5);
 
         if (genero) {
             String hombre = "Hombre";
             System.out.println("\tGÉNERO: " + hombre);
             System.out.print("\tNOMBRE: ");
-            
+
             switch (nombreAleatorio) {//Nombre aleatorio.
                 case 0 ->
-                    System.out.println("Antonio ");
+                    System.out.print("Antonio ");
                 case 1 ->
-                    System.out.println("Iván ");
+                    System.out.print("Iván ");
                 case 2 ->
-                    System.out.println("Roberto ");
+                    System.out.print("Roberto ");
                 case 3 ->
-                    System.out.println("Fernando ");
+                    System.out.print("Fernando ");
                 case 4 ->
-                    System.out.println("Miguel ");
+                    System.out.print("Miguel ");
             }
         } else {
             String mujer = "Mujer";
@@ -65,15 +64,15 @@ public class FuncionesPersona {
             System.out.print("\tNOMBRE: ");
             switch (nombreAleatorio) {//Nombre aleatorio.
                 case 0 ->
-                    System.out.println("Noemí ");
+                    System.out.print("Noemí ");
                 case 1 ->
-                    System.out.println("Mariam ");
+                    System.out.print("Mariam ");
                 case 2 ->
-                    System.out.println("Francineia ");
+                    System.out.print("Francineia ");
                 case 3 ->
-                    System.out.println("Cristina ");
+                    System.out.print("Cristina ");
                 case 4 ->
-                    System.out.println("Silvia ");
+                    System.out.print("Silvia ");
             }
         }
         return null;
@@ -90,18 +89,17 @@ public class FuncionesPersona {
         Random ran = new Random();
         int apellidoAleatorio = ran.nextInt(5);
 
-        System.out.print("\tAPELLIDO: ");
         switch (apellidoAleatorio) {//Apellido aleatorio.
             case 0 ->
-                System.out.print("Martín");
+                System.out.print("Martín ");
             case 1 ->
-                System.out.print("Ortega");
+                System.out.print("Ortega ");
             case 2 ->
-                System.out.print("Aguirre");
+                System.out.print("Aguirre ");
             case 3 ->
-                System.out.print("García");
+                System.out.print("García ");
             case 4 ->
-                System.out.print("Baños");
+                System.out.print("Baños ");
 
         }
         return null;

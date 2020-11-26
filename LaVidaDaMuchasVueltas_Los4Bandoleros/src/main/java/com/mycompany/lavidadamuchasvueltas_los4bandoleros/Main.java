@@ -23,8 +23,8 @@ public class Main {
      */
     public static void main(String[] args) {
         Boolean generoYo = generoAleatorio();
-        String nombreYo = nombreAleatorio();
-        String apellidoYo = apellidoAleatorio()+" "+apellidoAleatorio();
+        String nombreYo = nombreAleatorio(generoYo);
+        String apellidoYo = apellidoAleatorio()+apellidoAleatorio();
 
     }
 }
