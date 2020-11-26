@@ -41,10 +41,7 @@ public class FuncionesPersona {
         Random ran = new Random();
         int nombreAleatorio = ran.nextInt(5);
 
-        if (genero) {
-            String hombre = "Hombre";
-            System.out.println("\tGÉNERO: " + hombre);
-            System.out.print("\tNOMBRE: ");
+        if (genero) {//Hombre
 
             switch (nombreAleatorio) {//Nombre aleatorio.
                 case 0 ->
@@ -58,10 +55,8 @@ public class FuncionesPersona {
                 case 4 ->
                     System.out.print("Miguel ");
             }
-        } else {
-            String mujer = "Mujer";
-            System.out.println("\tGÉNERO: " + mujer);
-            System.out.print("\tNOMBRE: ");
+        } else {//Mujer
+
             switch (nombreAleatorio) {//Nombre aleatorio.
                 case 0 ->
                     System.out.print("Noemí ");
