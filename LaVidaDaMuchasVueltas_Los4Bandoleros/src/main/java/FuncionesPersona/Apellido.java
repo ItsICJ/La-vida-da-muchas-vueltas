@@ -10,10 +10,17 @@ import java.util.Random;
 /**
  *
  * @author Iván Carrillo
+ * @author Noemí Ortega
+ * @version 1.0
  */
-public class Apellidos {
+public class Apellido {
+    /**
+     * Esta clase realiza una función ,llamada apellidosAleatorio,
+     * que devolverá un apellido aleatorio entre las opciones que vemos.
+     * @return null
+     */
 
-    public static String apellidosAleatorio() {
+    public static String apellidoAleatorio() {
 
         Random ran = new Random();
         int apellidoAleatorio = ran.nextInt(5);

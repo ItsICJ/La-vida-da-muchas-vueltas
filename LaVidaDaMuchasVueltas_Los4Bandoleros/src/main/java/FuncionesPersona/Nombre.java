@@ -9,24 +9,28 @@ import java.util.Random;
 import static FuncionesPersona.Genero.generoAleatorio;
 
 /**
- * En esta clase creamos una función llamada nombreAleatorio que devuelve un
- * nombre aleatorio entre un conjunto de opciones distintas dependiendo de si el
- * género es hombre o mujer.
- *
+ * 
  * @author Noemí Ortega
  * @author Iván Carrillo
  * @version 1.0
  */
 public class Nombre {
-
+    
+    /**
+     * En esta clase creamos una función llamada nombreAleatorio que devuelve un
+     * nombre aleatorio entre un conjunto de opciones distintas dependiendo de
+     * si el género es hombre o mujer.
+     * 
+     * @return null.
+     */
     public static String nombreAleatorio() {
         Random ran = new Random();
 
         int nombreAleatorio = ran.nextInt(5);
 
         if (generoAleatorio()) {
-            String hombre="Hombre";
-            System.out.println("\tGÉNERO: "+hombre);
+            String hombre = "Hombre";
+            System.out.println("\tGÉNERO: " + hombre);
             System.out.print("\tNOMBRE: ");
 
             switch (nombreAleatorio) {//Nombre aleatorio.
@@ -42,8 +46,8 @@ public class Nombre {
                     System.out.println("Miguel ");
             }
         } else {
-            String mujer="Mujer";
-            System.out.println("\tGÉNERO: "+mujer);
+            String mujer = "Mujer";
+            System.out.println("\tGÉNERO: " + mujer);
             System.out.print("\tNOMBRE: ");
             switch (nombreAleatorio) {//Nombre aleatorio.
                 case 0 ->

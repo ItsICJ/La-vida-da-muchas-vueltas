@@ -9,9 +9,16 @@ import java.util.Random;
 
 /**
  *
- * @author Ivan
+ * @author Iván Carrillo
+ * @author Noemí Ortega
+ * @version 1.0
  */
 public class Genero {
+    /**
+     * Esta clase realiza una función, llamada generoAleatorio, que devolverá un género aleatorio
+     * gracias a un booleano. Las opciones serán hombre o mujer.
+     * @return generoAleatorio.
+     */
 
     public static Boolean generoAleatorio() {
 

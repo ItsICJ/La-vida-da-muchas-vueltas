@@ -7,23 +7,24 @@ package com.mycompany.lavidadamuchasvueltas_los4bandoleros;
 
 import static FuncionesPersona.Nombre.nombreAleatorio;
 import static FuncionesPersona.Genero.generoAleatorio;
-import static FuncionesPersona.Apellidos.apellidosAleatorio;
-
-import java.util.Random;
+import static FuncionesPersona.Apellido.apellidoAleatorio;
 
 /**
  *
- * @author Ivan
+ * @author Iván Carrillo
+ * @author Noemí Ortega
+ * @version 1.0
  */
 public class Main {
 
     /**
+     * En esta clase se leerán las variables de cada una de las funciones del fichero FuncionesPersona. 
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         Boolean generoYo = generoAleatorio();
         String nombreYo = nombreAleatorio();
-        String apellidoYo = apellidosAleatorio();
+        String apellidoYo = apellidoAleatorio();
 
     }
 }
