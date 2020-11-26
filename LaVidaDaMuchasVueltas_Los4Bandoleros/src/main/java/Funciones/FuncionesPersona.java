@@ -105,4 +105,16 @@ public class FuncionesPersona {
         return null;
     }
 
+    public static int valorEstadisticaAleatorio() {
+        Random ran = new Random();
+     
+        System.out.println(ran.nextInt(100));
+        return ran.nextInt(100);    
+    }
+    public static int valorEstadisticaAleatorio(int min){
+         Random ran = new Random();
+         
+         min = ran.nextInt(100);
+         return min;       
+    }
 }

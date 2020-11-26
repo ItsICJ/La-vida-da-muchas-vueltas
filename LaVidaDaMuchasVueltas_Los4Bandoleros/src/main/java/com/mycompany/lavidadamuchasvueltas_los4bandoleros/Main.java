@@ -9,6 +9,7 @@ import static Funciones.FuncionesPersona.nombreAleatorio;
 import static Funciones.FuncionesPersona.apellidoAleatorio;
 import static Funciones.FuncionesPersona.generoAleatorio;
 
+
 /**
  *
  * @author Iván Carrillo
@@ -24,10 +25,11 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+
         Boolean generoPapa = generoAleatorio();
         String nombrePapa = nombreAleatorio(generoPapa);
         String apellidosPapa = apellidoAleatorio() + " " + apellidoAleatorio();
-        
+
         byte sociabilidadPapa;
         byte empatiaPapa;
         byte inteligenciaPapa;
@@ -37,7 +39,7 @@ public class Main {
         Boolean generoMama = generoAleatorio();
         String nombreMama = nombreAleatorio(generoMama);
         String apellidosMama = apellidoAleatorio() + " " + apellidoAleatorio();
-        
+
         byte sociabilidadMama;
         byte empatiaMama;
         byte inteligenciaMama;
