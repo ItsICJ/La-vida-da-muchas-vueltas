@@ -18,13 +18,41 @@ import static Funciones.FuncionesPersona.generoAleatorio;
 public class Main {
 
     /**
-     * En esta clase se leerán las variables de cada una de las funciones del fichero FuncionesPersona. 
+     * En esta clase se leerán las variables de cada una de las funciones del
+     * fichero FuncionesPersona.
+     *
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Boolean generoPapa = generoAleatorio();
+        String nombrePapa = nombreAleatorio(generoPapa);
+        String apellidosPapa = apellidoAleatorio() + " " + apellidoAleatorio();
+        
+        int sociabilidadPapa;
+        int empatiaPapa;
+        int inteligenciaPapa;
+        int velocidadPapa;
+        int fuerzaPapa;
+
+        Boolean generoMama = generoAleatorio();
+        String nombreMama = nombreAleatorio(generoMama);
+        String apellidosMama = apellidoAleatorio() + " " + apellidoAleatorio();
+        
+        int sociabilidadMama;
+        int empatiaMama;
+        int inteligenciaMama;
+        int velocidadMama;
+        int fuerzaMama;
+
         Boolean generoYo = generoAleatorio();
         String nombreYo = nombreAleatorio(generoYo);
-        String apellidoYo = apellidoAleatorio()+apellidoAleatorio();
+        String apellidoYo = apellidoAleatorio() + " " + apellidoAleatorio();
+
+        int sociabilidadMaxYo;
+        int empatiaMaxYo;
+        int inteligenciaMaxYo;
+        int velocidadMaxYo;
+        int fuerzaMaxYo;
 
     }
 }
