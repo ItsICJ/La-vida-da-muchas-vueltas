@@ -5,9 +5,9 @@
  */
 package com.mycompany.lavidadamuchasvueltas_los4bandoleros;
 
-import static FuncionesPersona.Nombre.nombreAleatorio;
-import static FuncionesPersona.Genero.generoAleatorio;
-import static FuncionesPersona.Apellido.apellidoAleatorio;
+import static Funciones.FuncionesPersona.nombreAleatorio;
+import static Funciones.FuncionesPersona.apellidoAleatorio;
+import static Funciones.FuncionesPersona.generoAleatorio;
 
 /**
  *
@@ -24,7 +24,7 @@ public class Main {
     public static void main(String[] args) {
         Boolean generoYo = generoAleatorio();
         String nombreYo = nombreAleatorio();
-        String apellidoYo = apellidoAleatorio();
+        String apellidoYo = apellidoAleatorio()+" "+apellidoAleatorio();
 
     }
 }
