@@ -42,10 +42,6 @@ public class FuncionesPersona {
         int nombreAleatorio = ran.nextInt(5);
 
         if (genero) {
-            String hombre = "Hombre";
-            System.out.println("\tGÉNERO: " + hombre);
-            System.out.print("\tNOMBRE: ");
-
             switch (nombreAleatorio) {//Nombre aleatorio.
                 case 0 ->
                     System.out.print("Antonio ");
@@ -59,9 +55,6 @@ public class FuncionesPersona {
                     System.out.print("Miguel ");
             }
         } else {
-            String mujer = "Mujer";
-            System.out.println("\tGÉNERO: " + mujer);
-            System.out.print("\tNOMBRE: ");
             switch (nombreAleatorio) {//Nombre aleatorio.
                 case 0 ->
                     System.out.print("Noemí ");
@@ -105,16 +98,73 @@ public class FuncionesPersona {
         return null;
     }
 
+    /**
+     * Esta función sin argumentos genera un número entre 0 y 100 y lo
+     * devolverá.
+     *
+     * @return
+     */
     public static int valorEstadisticaAleatorio() {
         Random ran = new Random();
-     
+
         System.out.println(ran.nextInt(100));
-        return ran.nextInt(100);    
+        return ran.nextInt(100);
     }
-    public static int valorEstadisticaAleatorio(int min){
-         Random ran = new Random();
-         
-         min = ran.nextInt(100);
-         return min;       
+
+    /**
+     * Esta función recibe un argumento numérico llamado min, genera un número
+     * aleatorio entre min y 100 y lo devolverá.
+     *
+     * @param min
+     * @return
+     */
+    public static int valorEstadisticaAleatorio(int min) {
+        Random ran = new Random();
+
+        min = ran.nextInt(100);
+        return min;
+    }
+
+    /**
+     * Esta función recibe dos argumentos numéricos, llamados min y max,
+     * generará y devolverá un valor aleatorio entre min y max, con ambos
+     * incluídos.
+     *
+     * @param min
+     * @param max
+     * @return
+     */
+    public static int valorEstadisticaAleatorio(int min, int max) {
+        Random ran = new Random();
+
+        int valorRandom = ran.nextInt(((max + 1) - min) + min);
+        return valorRandom;
+    }
+
+    /**
+     * Esta función devuelve, concatenada en un String, toda la información de
+     * una persona.
+     *
+     * @param nombre
+     * @param apellidos
+     * @param genero
+     * @param sociabilidad
+     * @param empatia
+     * @param inteligencia
+     * @param velocidad
+     * @param fuerza
+     * @return
+     */
+    public static String imprimePersona(String nombre, String apellidos, boolean genero, byte sociabilidad,
+            byte empatia, byte inteligencia, byte velocidad, byte fuerza) {
+        System.out.println(nombre + " " + apellidos + " (" + genero + ")");
+        System.out.println("----------------------------------");
+        System.out.println("Sociabilidad: " + sociabilidad);
+        System.out.println("Empatía: " + empatia);
+        System.out.println("Inteligencia: " + inteligencia);
+        System.out.println("Velocidad: " + velocidad);
+        System.out.println("Fuerza " + fuerza);
+        return null;
+
     }
 }
