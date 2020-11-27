@@ -24,9 +24,8 @@ public class FuncionesPersona {
      */
     public static Boolean generoAleatorio() {
         Random ran = new Random();
-        boolean generoAleatorio = ran.nextBoolean();
-
-        return generoAleatorio;
+        boolean genero = ran.nextBoolean();
+        return genero;
     }
 
     /**
@@ -39,36 +38,37 @@ public class FuncionesPersona {
      */
     public static String nombreAleatorio(boolean genero) {
         Random ran = new Random();
+        String retA = "";
         int nombreAleatorio = ran.nextInt(5);
 
         if (genero) {
-            switch (nombreAleatorio) {//Nombre aleatorio.
+            switch (nombreAleatorio) {//Nombre aleatorio si es hombre.
                 case 0 ->
-                    System.out.print("Antonio ");
+                    retA = "Antonio ";
                 case 1 ->
-                    System.out.print("Iván ");
+                    retA = "Iván ";
                 case 2 ->
-                    System.out.print("Roberto ");
+                    retA = "Roberto ";
                 case 3 ->
-                    System.out.print("Fernando ");
+                    retA = "Fernando ";
                 case 4 ->
-                    System.out.print("Miguel ");
+                    retA = "Miguel ";
             }
         } else {
-            switch (nombreAleatorio) {//Nombre aleatorio.
+            switch (nombreAleatorio) {//Nombre aleatorio si es mujer.
                 case 0 ->
-                    System.out.print("Noemí ");
+                    retA = "Noemí ";
                 case 1 ->
-                    System.out.print("Mariam ");
+                    retA = "Mariam ";
                 case 2 ->
-                    System.out.print("Francineia ");
+                    retA = "Francineia ";
                 case 3 ->
-                    System.out.print("Cristina ");
+                    retA = "Cristina ";
                 case 4 ->
-                    System.out.print("Silvia ");
+                    retA = "Silvia ";
             }
         }
-        return null;
+        return retA;
 
     }
 
@@ -80,22 +80,23 @@ public class FuncionesPersona {
      */
     public static String apellidoAleatorio() {
         Random ran = new Random();
+        String retB = "";
         int apellidoAleatorio = ran.nextInt(5);
 
         switch (apellidoAleatorio) {//Apellido aleatorio.
             case 0 ->
-                System.out.print("Martín ");
+                retB = "Martín ";
             case 1 ->
-                System.out.print("Ortega ");
+                retB = "Ortega ";
             case 2 ->
-                System.out.print("Aguirre ");
+                retB = "Aguirre ";
             case 3 ->
-                System.out.print("García ");
+                retB = "García ";
             case 4 ->
-                System.out.print("Baños ");
+                retB = "Baños ";
 
         }
-        return null;
+        return retB;
     }
 
     /**
@@ -104,11 +105,9 @@ public class FuncionesPersona {
      *
      * @return
      */
-    public static int valorEstadisticaAleatorio() {
+    public static byte valorEstadisticaAleatorio() {
         Random ran = new Random();
-
-        System.out.println(ran.nextInt(100));
-        return ran.nextInt(100);
+        return (byte) ran.nextInt(100);
     }
 
     /**
@@ -118,11 +117,10 @@ public class FuncionesPersona {
      * @param min
      * @return
      */
-    public static int valorEstadisticaAleatorio(int min) {
+    public static byte valorEstadisticaAleatorio(byte min) {
         Random ran = new Random();
-
-        min = ran.nextInt(100);
-        return min;
+        byte a = (byte) (ran.nextInt((100 - min)) + min);
+        return a;
     }
 
     /**
@@ -134,11 +132,10 @@ public class FuncionesPersona {
      * @param max
      * @return
      */
-    public static int valorEstadisticaAleatorio(int min, int max) {
+    public static byte valorEstadisticaAleatorio(byte min, byte max) {
         Random ran = new Random();
-
-        int valorRandom = ran.nextInt(((max + 1) - min) + min);
-        return valorRandom;
+        byte b = (byte) (ran.nextInt((max - min)) + min);
+        return b;
     }
 
     /**
@@ -157,14 +154,10 @@ public class FuncionesPersona {
      */
     public static String imprimePersona(String nombre, String apellidos, boolean genero, byte sociabilidad,
             byte empatia, byte inteligencia, byte velocidad, byte fuerza) {
-        System.out.println(nombre + " " + apellidos + " (" + genero + ")");
-        System.out.println("----------------------------------");
-        System.out.println("Sociabilidad: " + sociabilidad);
-        System.out.println("Empatía: " + empatia);
-        System.out.println("Inteligencia: " + inteligencia);
-        System.out.println("Velocidad: " + velocidad);
-        System.out.println("Fuerza " + fuerza);
-        return null;
-
+        String retC = "";
+        retC = nombre + apellidos + "(" + (genero ? "hombre" : "mujer") + ")" + "\n----------------------------------" + "\nSociabilidad= " + sociabilidad
+                + "\nEmpatía= " + empatia + "\nInteligencia= " + inteligencia
+                + "\nVelocidad= " + velocidad + "\nFuerza= " + fuerza;
+        return retC;
     }
 }

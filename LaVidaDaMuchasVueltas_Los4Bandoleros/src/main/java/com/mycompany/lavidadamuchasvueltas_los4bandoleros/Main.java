@@ -8,6 +8,8 @@ package com.mycompany.lavidadamuchasvueltas_los4bandoleros;
 import static Funciones.FuncionesPersona.nombreAleatorio;
 import static Funciones.FuncionesPersona.apellidoAleatorio;
 import static Funciones.FuncionesPersona.generoAleatorio;
+import static Funciones.FuncionesPersona.valorEstadisticaAleatorio;
+import static Funciones.FuncionesPersona.imprimePersona;
 
 /**
  *
@@ -27,41 +29,46 @@ public class Main {
         /*
         PAPA
          */
-        Boolean generoPapa = generoAleatorio();
+        Boolean generoPapa = true;
         String nombrePapa = nombreAleatorio(generoPapa);
         String apellidosPapa = apellidoAleatorio() + " " + apellidoAleatorio();
 
-        byte sociabilidadPapa;
-        byte empatiaPapa;
-        byte inteligenciaPapa;
-        byte velocidadPapa;
-        byte fuerzaPapa;
+        byte sopaciabilidadPapa = valorEstadisticaAleatorio((byte) 50, (byte) 100);
+        byte empatiaPapa = valorEstadisticaAleatorio((byte) 50);
+        byte inteligenciaPapa = valorEstadisticaAleatorio();
+        byte velocidadPapa = valorEstadisticaAleatorio((byte) 50);
+        byte fuerzaPapa = valorEstadisticaAleatorio((byte) 50, (byte) 100);
+        System.out.println(imprimePersona(nombrePapa, apellidosPapa, generoPapa, sopaciabilidadPapa, empatiaPapa, inteligenciaPapa, velocidadPapa, fuerzaPapa));
+        System.out.println("");
 
         /*
         MAMA
          */
-        Boolean generoMama = generoAleatorio();
-        String nombreMama = nombreAleatorio(generoMama);
+        Boolean generoMama = false;
+        String nombreMama = nombreAleatorio(generoPapa);
         String apellidosMama = apellidoAleatorio() + " " + apellidoAleatorio();
 
-        byte sociabilidadMama;
-        byte empatiaMama;
-        byte inteligenciaMama;
-        byte velocidadMama;
-        byte fuerzaMama;
+        byte sopaciabilidadMama = valorEstadisticaAleatorio((byte) 50, (byte) 100);
+        byte empatiaMama = valorEstadisticaAleatorio((byte) 50);
+        byte inteligenciaMama = valorEstadisticaAleatorio();
+        byte velocidadMama = valorEstadisticaAleatorio((byte) 50);
+        byte fuerzaMama = valorEstadisticaAleatorio((byte) 50, (byte) 100);
+        System.out.println(imprimePersona(nombreMama, apellidosMama, generoMama, sopaciabilidadMama, empatiaMama, inteligenciaMama, velocidadMama, fuerzaMama));
+        System.out.println("");
 
         /*
         yo
          */
         Boolean generoYo = generoAleatorio();
-        String nombreYo = nombreAleatorio(generoYo);
-        String apellidoYo = apellidoAleatorio() + " " + apellidoAleatorio();
+        String nombreYo = nombreAleatorio(generoPapa);
+        String apellidosYo = apellidoAleatorio() + " " + apellidoAleatorio();
 
-        int sociabilidadMaxYo;
-        int empatiaMaxYo;
-        int inteligenciaMaxYo;
-        int velocidadMaxYo;
-        int fuerzaMaxYo;
-
+        byte sopaciabilidadYo = valorEstadisticaAleatorio((byte) 50, (byte) 100);
+        byte empatiaYo = valorEstadisticaAleatorio((byte) 50);
+        byte inteligenciaYo = valorEstadisticaAleatorio();
+        byte velocidadYo = valorEstadisticaAleatorio((byte) 50);
+        byte fuerzaYo = valorEstadisticaAleatorio((byte) 50, (byte) 100);
+        System.out.println(imprimePersona(nombreYo, apellidosYo, generoYo, sopaciabilidadYo, empatiaYo, inteligenciaYo, velocidadYo, fuerzaYo));
+        System.out.println("");
     }
 }
