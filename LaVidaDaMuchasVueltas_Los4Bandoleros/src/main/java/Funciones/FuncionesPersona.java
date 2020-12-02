@@ -167,10 +167,10 @@ public class FuncionesPersona {
      * @param fuerza
      * @return
      */
-    public static String imprimePersona(String nombre, String apellidos, boolean genero, byte sociabilidad,
+    public static String imprimePersona(String nombre, String apellidos, boolean genero, byte edad, byte sociabilidad,
             byte empatia, byte inteligencia, byte velocidad, byte fuerza) {
         String retC = "";
-        retC = nombre + apellidos + "(" + (genero ? "hombre" : "mujer") + ")" + "\n----------------------------------" + "\nSociabilidad= " + sociabilidad
+        retC = nombre + apellidos + "(" + (genero ? "hombre" : "mujer") + ")" + "\n----------------------------------" + "\nEdad= " + edad + "\nSociabilidad= " + sociabilidad
                 + "\nEmpatía= " + empatia + "\nInteligencia= " + inteligencia
                 + "\nVelocidad= " + velocidad + "\nFuerza= " + fuerza;
         return retC;
