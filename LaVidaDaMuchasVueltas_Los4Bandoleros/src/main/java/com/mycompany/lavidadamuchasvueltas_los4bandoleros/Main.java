@@ -27,10 +27,10 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /*
-        PAPA
+        /**
+         * Declaramos e inicializamos las variables correspondientes a PAPA.
          */
-        Boolean generoPapa = false;
+        Boolean generoPapa = true;
         String nombrePapa = nombreAleatorio(generoPapa);
         String apellidosPapa = apellidoAleatorio() + " " + apellidoAleatorio();
         byte edadPapa = valorEstadisticaAleatorio((byte) 30, (byte) 100);
@@ -44,11 +44,11 @@ public class Main {
         System.out.println(imprimePersona(nombrePapa, apellidosPapa, generoPapa, edadPapa, sociabilidadPapa, empatiaPapa, inteligenciaPapa, velocidadPapa, fuerzaPapa));
         System.out.println("");
 
-        /*
-        MAMA
+        /**
+         * Declaramos e inicializamos las variables correspondientes a MAMA.
          */
         Boolean generoMama = false;
-        String nombreMama = nombreAleatorio(generoPapa);
+        String nombreMama = nombreAleatorio(generoMama);
         String apellidosMama = apellidoAleatorio() + " " + apellidoAleatorio();
         byte edadMama = valorEstadisticaAleatorio((byte) 30, (byte) 100);
         String vivaMama;
@@ -61,32 +61,38 @@ public class Main {
         System.out.println(imprimePersona(nombreMama, apellidosMama, generoMama, edadMama, sociabilidadMama, empatiaMama, inteligenciaMama, velocidadMama, fuerzaMama));
         System.out.println("");
 
-        /*
-        YO
+        /**
+         * Declaramos e inicializamos las variables correspondientes a YO.
          */
         Boolean generoYo = generoAleatorio();
-        String nombreYo = nombreAleatorio(generoPapa);
+        String nombreYo = nombreAleatorio(generoYo);
         String apellidosYo = (apellidosPapa = apellidoAleatorio()) + (apellidosMama = apellidoAleatorio());
         byte edadYo = 0;
         String vivoYo;
-
+         
+        byte sociabilidadYo;
         byte sociabilidadMaxYo = valorEstadisticaAleatorio((byte) 50, (byte) 100);
+        byte empatiaYo; 
         byte empatiaMaxYo = valorEstadisticaAleatorio((byte) 50);
+        byte inteligenciaYo;
         byte inteligenciaMaxYo = valorEstadisticaAleatorio((byte) 50);
+        byte velocidadYo;
         byte velocidadMaxYo = valorEstadisticaAleatorio((byte) 50);
+        byte fuerzaYO;
         byte fuerzaMaxYo = valorEstadisticaAleatorio((byte) 50, (byte) 100);
+        
         System.out.println(imprimePersona(nombreYo, apellidosYo, generoYo, edadYo, sociabilidadMaxYo, empatiaMaxYo, inteligenciaMaxYo, velocidadMaxYo, fuerzaMaxYo));
         System.out.println("");
 
-
-        /*
-        HERMANOS
+        /**
+         * Declaramoslas variables correspondientes a HERMANO.
          */
         // HERMANO 1
         Boolean generoHermano1;
         String nombreHermano1;
         String apellidosHermano1;
         byte edadHermano1;
+        String vivoHermano1;
 
         byte sociabilidadHermano1;
         byte empatiaHermano1;
@@ -99,6 +105,7 @@ public class Main {
         String nombreHermano2;
         String apellidosHermano2;
         byte edadHermano2;
+        String vivoHermano2;
 
         byte sociabilidadHermano2;
         byte empatiaHermano2;
@@ -111,6 +118,7 @@ public class Main {
         String nombreHermano3;
         String apellidosHermano3;
         byte edadHermano3;
+        String vivoHermano3;
 
         byte sociabilidadHermano3;
         byte empatiaHermano3;
@@ -118,12 +126,17 @@ public class Main {
         byte velocidadHermano3;
         byte fuerzaHermano3;
 
+        /**
+         * A continuación se generará un número aleatorio entre 0 y 3 que será
+         * el número de hermanos que tengamos, según ese número se inicirá todas
+         * las variables hermano, algunas o ninguna.
+         */
         Random ran = new Random();
         byte nHermanos = (byte) ran.nextInt(4);
         switch (nHermanos) {
             case 0:
                 generoHermano3 = generoAleatorio();
-                nombreHermano3 = nombreAleatorio(generoPapa);
+                nombreHermano3 = nombreAleatorio(generoHermano3);
                 apellidosHermano3 = apellidosYo;
                 edadHermano3 = valorEstadisticaAleatorio((byte) 0, (byte) 50);
 
@@ -136,7 +149,7 @@ public class Main {
                 System.out.println("");
             case 1:
                 generoHermano2 = generoAleatorio();
-                nombreHermano2 = nombreAleatorio(generoPapa);
+                nombreHermano2 = nombreAleatorio(generoHermano2);
                 apellidosHermano2 = apellidosYo;
                 edadHermano2 = valorEstadisticaAleatorio((byte) 0, (byte) 50);
 
@@ -149,7 +162,7 @@ public class Main {
                 System.out.println("");
             case 2:
                 generoHermano1 = generoAleatorio();
-                nombreHermano1 = nombreAleatorio(generoPapa);
+                nombreHermano1 = nombreAleatorio(generoHermano1);
                 apellidosHermano1 = apellidosYo;
                 edadHermano1 = valorEstadisticaAleatorio((byte) 0, (byte) 50);
 
