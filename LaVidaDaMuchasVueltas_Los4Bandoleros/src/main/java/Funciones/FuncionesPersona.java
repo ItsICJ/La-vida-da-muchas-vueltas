@@ -43,29 +43,39 @@ public class FuncionesPersona {
 
         if (genero) {
             switch (nombreAleatorio) {//Nombre aleatorio si es hombre.
-                case 0 ->
+                case 0:
                     retA = "Antonio ";
-                case 1 ->
+                    break;
+                case 1:
                     retA = "Iván ";
-                case 2 ->
+                    break;
+                case 2:
                     retA = "Roberto ";
-                case 3 ->
+                    break;
+                case 3:
                     retA = "Fernando ";
-                case 4 ->
+                    break;
+                case 4:
                     retA = "Miguel ";
+                    break;
             }
         } else {
             switch (nombreAleatorio) {//Nombre aleatorio si es mujer.
-                case 0 ->
+                case 0:
                     retA = "Noemí ";
-                case 1 ->
+                    break;
+                case 1:
                     retA = "Mariam ";
-                case 2 ->
+                    break;
+                case 2:
                     retA = "Francineia ";
-                case 3 ->
+                    break;
+                case 3:
                     retA = "Cristina ";
-                case 4 ->
+                    break;
+                case 4:
                     retA = "Silvia ";
+                    break;
             }
         }
         return retA;
@@ -84,16 +94,21 @@ public class FuncionesPersona {
         int apellidoAleatorio = ran.nextInt(5);
 
         switch (apellidoAleatorio) {//Apellido aleatorio.
-            case 0 ->
+            case 0:
                 retB = "Martín ";
-            case 1 ->
+                break;
+            case 1:
                 retB = "Ortega ";
-            case 2 ->
+                break;
+            case 2:
                 retB = "Aguirre ";
-            case 3 ->
+                break;
+            case 3:
                 retB = "García ";
-            case 4 ->
+                break;
+            case 4:
                 retB = "Baños ";
+                break;
 
         }
         return retB;
@@ -160,4 +175,5 @@ public class FuncionesPersona {
                 + "\nVelocidad= " + velocidad + "\nFuerza= " + fuerza;
         return retC;
     }
+
 }
