@@ -32,7 +32,9 @@ public class Main {
          */
         Boolean generoPapa = true;
         String nombrePapa = nombreAleatorio(generoPapa);
-        String apellidosPapa = apellidoAleatorio() + " " + apellidoAleatorio();
+        String apellidoPapa1 = apellidoAleatorio();
+        String apellidoPapa2 = apellidoAleatorio();
+        String apellidosPapa = apellidoPapa1 + " " + apellidoPapa2;
         byte edadPapa = valorEstadisticaAleatorio((byte) 30, (byte) 100);
         String vivoPapa;
 
@@ -49,7 +51,9 @@ public class Main {
          */
         Boolean generoMama = false;
         String nombreMama = nombreAleatorio(generoMama);
-        String apellidosMama = apellidoAleatorio() + " " + apellidoAleatorio();
+        String apellidoMama1 = apellidoAleatorio();
+        String apellidoMama2 = apellidoAleatorio();
+        String apellidosMama = apellidoMama1 + " " + apellidoMama2;
         byte edadMama = valorEstadisticaAleatorio((byte) 30, (byte) 100);
         String vivaMama;
 
@@ -66,13 +70,13 @@ public class Main {
          */
         Boolean generoYo = generoAleatorio();
         String nombreYo = nombreAleatorio(generoYo);
-        String apellidosYo = (apellidosPapa = apellidoAleatorio()) + (apellidosMama = apellidoAleatorio());
+        String apellidosYo = apellidoPapa1 + " " + apellidoMama1;
         byte edadYo = 0;
         String vivoYo;
-         
+
         byte sociabilidadYo;
         byte sociabilidadMaxYo = valorEstadisticaAleatorio((byte) 50, (byte) 100);
-        byte empatiaYo; 
+        byte empatiaYo;
         byte empatiaMaxYo = valorEstadisticaAleatorio((byte) 50);
         byte inteligenciaYo;
         byte inteligenciaMaxYo = valorEstadisticaAleatorio((byte) 50);
@@ -80,7 +84,7 @@ public class Main {
         byte velocidadMaxYo = valorEstadisticaAleatorio((byte) 50);
         byte fuerzaYO;
         byte fuerzaMaxYo = valorEstadisticaAleatorio((byte) 50, (byte) 100);
-        
+
         System.out.println(imprimePersona(nombreYo, apellidosYo, generoYo, edadYo, sociabilidadMaxYo, empatiaMaxYo, inteligenciaMaxYo, velocidadMaxYo, fuerzaMaxYo));
         System.out.println("");
 
