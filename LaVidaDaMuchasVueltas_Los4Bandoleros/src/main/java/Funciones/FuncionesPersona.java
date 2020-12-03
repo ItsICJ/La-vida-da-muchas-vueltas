@@ -37,46 +37,30 @@ public class FuncionesPersona {
      * @return null.
      */
     public static String nombreAleatorio(boolean genero) {
-        Random ran = new Random();
         String retA = "";
-        int nombreAleatorio = ran.nextInt(5);
 
         if (genero) {
-            switch (nombreAleatorio) {//Nombre aleatorio si es hombre.
-                case 0:
-                    retA = "Antonio ";
-                    break;
-                case 1:
-                    retA = "Iván ";
-                    break;
-                case 2:
-                    retA = "Roberto ";
-                    break;
-                case 3:
-                    retA = "Fernando ";
-                    break;
-                case 4:
-                    retA = "Miguel ";
-                    break;
-            }
+            Random r = new Random();
+            String[] nombresHombre = {"Eustaquio", "Fernando", "Mariano", "Antón", "Claudio",
+                "Koldo", "Patricio", "Alexis", "Manuel", "Rafael", "Mauricio", "Gregorio",
+                "Íker", "Carlos", "Javier", "Francisco", "Nemesio", "Anselmo", "Miguel",
+                "Ignacio", "Óscar", "Alex", "Juán", "Lander", "Agustín", "César", "Nacho",
+                "Javier", "Jorge", "Pablo", "Guillermo", "Pepe", "Gabriel", "Francisco",
+                "Franco", "Miguel", "Gonzalo", "Abrahán", "Luís", "Rafael", "Alberto", "Raúl",
+                "Abel", "Antonio", "Enrique", "José", "Adrián", "Darío", "Mateo", "Alejandro",
+                "Leandro", "Enzo", "Paco", "Amador", "Félix"};
+            retA = (nombresHombre[r.nextInt(nombresHombre.length)]+" ");
         } else {
-            switch (nombreAleatorio) {//Nombre aleatorio si es mujer.
-                case 0:
-                    retA = "Noemí ";
-                    break;
-                case 1:
-                    retA = "Mariam ";
-                    break;
-                case 2:
-                    retA = "Francineia ";
-                    break;
-                case 3:
-                    retA = "Cristina ";
-                    break;
-                case 4:
-                    retA = "Silvia ";
-                    break;
-            }
+            Random r = new Random();
+            String[] nombresMujer = {"Cristobalina", "Paca", "Presentación", "Sarai", "Antonia",
+                "Loli", "Juani", "Olga", "Susana", "Ruth", "Eustaquia", "Josefina", "Úrsula", "Angie",
+                "Carla", "Isabel", "Marta", "Dolores", "Sonia", "Raquel", "Esther", "Érika", "Luisa",
+                "Natalia", "Almudena", "Laura", "Kassandra", "Violeta", "María", "Mery", "Susana",
+                "Daniela", "Rebeca", "Herminia", "Sandra", "Lorena", "Paula", "Ainhoa", "Mar",
+                "Manoli", "Julia", "Rocío", "Marina", "Arelis", "Blanca", "Celeste", "Yolanda",
+                "Noemí", "Nuria", "Carmen", "Sheila", "Lucía", "Alma", "Cristina", "Lucy",
+                "Tamara", "Victoria"};
+            retA = (nombresMujer[r.nextInt(nombresMujer.length)]+" ");
         }
         return retA;
 
@@ -89,28 +73,16 @@ public class FuncionesPersona {
      * @return null
      */
     public static String apellidoAleatorio() {
-        Random ran = new Random();
         String retB = "";
-        int apellidoAleatorio = ran.nextInt(5);
-
-        switch (apellidoAleatorio) {//Apellido aleatorio.
-            case 0:
-                retB = "Martín ";
-                break;
-            case 1:
-                retB = "Ortega ";
-                break;
-            case 2:
-                retB = "Aguirre ";
-                break;
-            case 3:
-                retB = "García ";
-                break;
-            case 4:
-                retB = "Baños ";
-                break;
-
-        }
+        Random r = new Random();
+        String[] apellidos = {"Fernández", "De todos los santos", "Heredia", "Aguirre", "Del Piero",
+            "Pérez", "Reverte", "Rojas", "Muñoz", "de la Rosa", "Guiérrez", "Molina", "López", "Romero",
+            "León", "Martínez", "Fernández", "Bas", "Ortega", "Córdoba", "Vega", "Guzmán", "Varo",
+            "Páramos", "Vivo", "Pernas", "García", "Laago", "Pinto", "Pintor", "Delgado", "Vietes",
+            "Portero", "Pestaña", "Guerrero", "Sardà", "Reyes", "Callado", "Santisteban", "Rubio",
+            "Flores", "Carmona", "Gallego", "Ventura", "Melero", "Morales", "Soldado", "Silva",
+            "Hernández", "Ruíz", "Machís", "Duarte", "Díaz", "Vico", "Montoro", "Reyero", "Gamarra"};
+        retB = (apellidos[r.nextInt(apellidos.length)]);
         return retB;
     }
 
