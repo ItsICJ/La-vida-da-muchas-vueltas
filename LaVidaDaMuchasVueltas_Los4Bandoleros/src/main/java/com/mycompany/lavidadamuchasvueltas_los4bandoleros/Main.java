@@ -11,8 +11,10 @@ import static Funciones.FuncionesPersona.generoAleatorio;
 import static Funciones.FuncionesPersona.valorEstadisticaAleatorio;
 import static Funciones.FuncionesPersona.imprimePersona;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
+ * Clase principal del juego.
  *
  * @author Iván Carrillo
  * @author Noemí Ortega
@@ -21,8 +23,7 @@ import java.util.Random;
 public class Main {
 
     /**
-     * En esta clase se leerán las variables de cada una de las funciones del
-     * fichero FuncionesPersona.
+     * En este main se codificará todo lo necesario para ejecutar el juego.
      *
      * @param args the command line arguments
      */
@@ -43,8 +44,6 @@ public class Main {
         byte inteligenciaPapa = valorEstadisticaAleatorio((byte) 50);
         byte velocidadPapa = valorEstadisticaAleatorio((byte) 50);
         byte fuerzaPapa = valorEstadisticaAleatorio((byte) 50, (byte) 100);
-        System.out.println(imprimePersona(nombrePapa, apellidosPapa, generoPapa, edadPapa, sociabilidadPapa, empatiaPapa, inteligenciaPapa, velocidadPapa, fuerzaPapa));
-        System.out.println("");
 
         /**
          * Declaramos e inicializamos las variables correspondientes a MAMA.
@@ -62,8 +61,6 @@ public class Main {
         byte inteligenciaMama = valorEstadisticaAleatorio((byte) 50);
         byte velocidadMama = valorEstadisticaAleatorio((byte) 50);
         byte fuerzaMama = valorEstadisticaAleatorio((byte) 50, (byte) 100);
-        System.out.println(imprimePersona(nombreMama, apellidosMama, generoMama, edadMama, sociabilidadMama, empatiaMama, inteligenciaMama, velocidadMama, fuerzaMama));
-        System.out.println("");
 
         /**
          * Declaramos e inicializamos las variables correspondientes a YO.
@@ -72,7 +69,7 @@ public class Main {
         String nombreYo = nombreAleatorio(generoYo);
         String apellidosYo = apellidoPapa1 + " " + apellidoMama1;
         byte edadYo = 0;
-        String vivoYo;
+        boolean vivoYo = generoAleatorio();
 
         byte sociabilidadYo;
         byte sociabilidadMaxYo;
@@ -114,12 +111,10 @@ public class Main {
             fuerzaMaxYo = valorEstadisticaAleatorio((byte) fuerzaPapa, (byte) fuerzaMama);
 
         }
-
-        System.out.println(imprimePersona(nombreYo, apellidosYo, generoYo, edadYo, sociabilidadMaxYo, empatiaMaxYo, inteligenciaMaxYo, velocidadMaxYo, fuerzaMaxYo));
-        System.out.println("");
+        byte iniciativaYo = 2;
 
         /**
-         * Declaramoslas variables correspondientes a HERMANO.
+         * Declaramos las variables correspondientes a HERMANO.
          */
         // HERMANO 1
         Boolean generoHermano1;
@@ -161,9 +156,10 @@ public class Main {
         byte fuerzaHermano3;
 
         /**
-         * A continuación se generará un número aleatorio entre 0 y 3 que será
-         * el número de hermanos que tengamos, según ese número se inicirá todas
-         * las variables hermano, algunas o ninguna.
+         * A continuación se inicializarán las variables correspondientes a
+         * HERMANO de la siguiente manera: se creará un número random entre 0 y
+         * 3(número de hermanos que tendré), y dependiendo del número de
+         * hermanos que tenga de forma directa crearé un número de personas.
          */
         Random ran = new Random();
         byte nHermanos = (byte) ran.nextInt(4);
@@ -179,8 +175,7 @@ public class Main {
                 inteligenciaHermano3 = valorEstadisticaAleatorio((byte) 50);
                 velocidadHermano3 = valorEstadisticaAleatorio((byte) 50);
                 fuerzaHermano3 = valorEstadisticaAleatorio((byte) 50, (byte) 100);
-                System.out.println(imprimePersona(nombreHermano3, apellidosHermano3, generoHermano3, edadHermano3, sociabilidadHermano3, empatiaHermano3, inteligenciaHermano3, velocidadHermano3, fuerzaHermano3));
-                System.out.println("");
+
             case 1:
                 generoHermano2 = generoAleatorio();
                 nombreHermano2 = nombreAleatorio(generoHermano2);
@@ -192,8 +187,6 @@ public class Main {
                 inteligenciaHermano2 = valorEstadisticaAleatorio();
                 velocidadHermano2 = valorEstadisticaAleatorio((byte) 50);
                 fuerzaHermano2 = valorEstadisticaAleatorio((byte) 50, (byte) 100);
-                System.out.println(imprimePersona(nombreHermano2, apellidosHermano2, generoHermano2, edadHermano2, sociabilidadHermano2, empatiaHermano2, inteligenciaHermano2, velocidadHermano2, fuerzaHermano2));
-                System.out.println("");
             case 2:
                 generoHermano1 = generoAleatorio();
                 nombreHermano1 = nombreAleatorio(generoHermano1);
@@ -205,11 +198,96 @@ public class Main {
                 inteligenciaHermano1 = valorEstadisticaAleatorio();
                 velocidadHermano1 = valorEstadisticaAleatorio((byte) 50);
                 fuerzaHermano1 = valorEstadisticaAleatorio((byte) 50, (byte) 100);
-                System.out.println(imprimePersona(nombreHermano1, apellidosHermano1, generoHermano1, edadHermano1, sociabilidadHermano1, empatiaHermano1, inteligenciaHermano1, velocidadHermano1, fuerzaHermano1));
-                System.out.println("");
             case 3:
 
                 break;
+        }
+
+        /**
+         * Con este if conseguimos que si vivoYo tiene como valor true de paso a
+         * un juego que se explicará en las siguientes documentaciones.
+         */
+        byte opcion = 0;
+        Scanner sc = new Scanner(System.in);
+        if (vivoYo) {
+            /**
+             * Este DoWhile te ofrece continuamente un menú de 5 opciones hasta
+             * que elijas la opción 5 que equivale a morir o agluna de las otras
+             * opciones, aunque solamente saldrá del juego elijiendo la opción
+             * 5, las opciones del 1 al 4 tiene objetivos varios que se
+             * explicarán a continuación.
+             */
+            while (opcion != 5) {
+                System.out.println("Elige una opción:"
+                        + "\n\t1 - Impimir mi información."
+                        + "\n\t2 - Imprimir información de mi familia."
+                        + "\n\t3 - Hacer cosas."
+                        + "\n\t4 - Crecer."
+                        + "\n\t5 - Terminar (morir).");
+
+                do {
+                    opcion = Byte.parseByte(sc.nextLine());
+                    if (opcion < 1 || opcion > 5) {
+                        System.out.println("¡Vamos!");
+                    }
+                } while (opcion < 1 || opcion > 5);
+
+                /**
+                 * Cada case de este switch equivale a cada opción del menú.
+                 */
+                switch (opcion) {
+                    /**
+                     * Este case imprime el valor de las variables referentes a
+                     * YO.
+                     */
+                    case 1:
+                        System.out.println(imprimePersona(nombreYo, apellidosYo, generoYo, edadYo, sociabilidadMaxYo, empatiaMaxYo, inteligenciaMaxYo, velocidadMaxYo, fuerzaMaxYo));
+                        System.out.println("");
+                        break;
+
+                    /**
+                     * Este case imprime el valor de las variables referentes a
+                     * PAPA,MAMA y HERMANO(en caso de que tenga).
+                     */
+                    case 2:
+                        System.out.println(imprimePersona(nombrePapa, apellidosPapa, generoPapa, edadPapa, sociabilidadPapa, empatiaPapa, inteligenciaPapa, velocidadPapa, fuerzaPapa));
+                        System.out.println("");
+                        System.out.println(imprimePersona(nombreMama, apellidosMama, generoMama, edadMama, sociabilidadMama, empatiaMama, inteligenciaMama, velocidadMama, fuerzaMama));
+                        System.out.println("");
+                        System.out.println(imprimePersona(nombreHermano1, apellidosHermano1, generoHermano1, edadHermano1, sociabilidadHermano1, empatiaHermano1, inteligenciaHermano1, velocidadHermano1, fuerzaHermano1));
+                        System.out.println("");
+                        System.out.println(imprimePersona(nombreHermano2, apellidosHermano2, generoHermano2, edadHermano2, sociabilidadHermano2, empatiaHermano2, inteligenciaHermano2, velocidadHermano2, fuerzaHermano2));
+                        System.out.println("");
+                        System.out.println(imprimePersona(nombreHermano3, apellidosHermano3, generoHermano3, edadHermano3, sociabilidadHermano3, empatiaHermano3, inteligenciaHermano3, velocidadHermano3, fuerzaHermano3));
+                        System.out.println("");
+                        break;
+
+                    /**
+                     * No tenemos nociones de lo que hace este case.
+                     */
+                    case 3:
+
+                        break;
+
+                    /**
+                     * Este case incrementa la edad de todos más uno.
+                     */
+                    case 4:
+                        edadPapa++;
+                        edadMama++;
+                        edadYo++;
+                        break;
+
+                    /**
+                     * Este case finaliza el juego, bueno tu elejiste morir así
+                     * que...
+                     */
+                    case 5:
+                        System.out.println("Suicidiiiioooo");
+                        break;
+
+                }
+            }
         }
 
     }

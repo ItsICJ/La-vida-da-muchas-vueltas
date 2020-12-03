@@ -8,6 +8,7 @@ package Funciones;
 import java.util.Random;
 
 /**
+ * Funciones para asignar valor a las variables de cada persona.
  *
  * @author Iván Carrillo
  * @author Noemí Ortega
@@ -16,11 +17,10 @@ import java.util.Random;
 public class FuncionesPersona {
 
     /**
-     * Esta clase realiza una función, llamada generoAleatorio, que devolverá un
-     * género aleatorio gracias a un booleano. Las opciones serán hombre o
-     * mujer.
+     * Creamos la función generoAleatorio, que devolverá un género aleatorio
+     * mediante un booleano, las opciones serán hombre(true) o mujer(false).
      *
-     * @return generoAleatorio.
+     * @return generoAleatorio(hombre(true) o mujer(false))
      */
     public static Boolean generoAleatorio() {
         Random ran = new Random();
@@ -29,17 +29,17 @@ public class FuncionesPersona {
     }
 
     /**
-     * En esta clase creamos una función llamada nombreAleatorio que devuelve un
-     * nombre aleatorio entre un conjunto de opciones distintas dependiendo de
-     * si el género es hombre o mujer.
+     * Creamos la función nombreAleatorio que generará un nombre aleatorio entre
+     * un conjunto de opciones distintas dependiendo de si el género que recibe
+     * por argumentos es hombre o mujer
      *
      * @param genero
-     * @return null.
+     * @return retA(nombre de hombre o mujer)
      */
     public static String nombreAleatorio(boolean genero) {
         String retA = "";
 
-        if (genero) {
+        if (genero) {//si es verdadero el nombre es de hombre.
             Random r = new Random();
             String[] nombresHombre = {"Eustaquio", "Fernando", "Mariano", "Antón", "Claudio",
                 "Koldo", "Patricio", "Alexis", "Manuel", "Rafael", "Mauricio", "Gregorio",
@@ -49,8 +49,8 @@ public class FuncionesPersona {
                 "Franco", "Miguel", "Gonzalo", "Abrahán", "Luís", "Rafael", "Alberto", "Raúl",
                 "Abel", "Antonio", "Enrique", "José", "Adrián", "Darío", "Mateo", "Alejandro",
                 "Leandro", "Enzo", "Paco", "Amador", "Félix"};
-            retA = (nombresHombre[r.nextInt(nombresHombre.length)]+" ");
-        } else {
+            retA = (nombresHombre[r.nextInt(nombresHombre.length)] + " ");
+        } else {//si es falso el nombre es de mujer.
             Random r = new Random();
             String[] nombresMujer = {"Cristobalina", "Paca", "Presentación", "Sarai", "Antonia",
                 "Loli", "Juani", "Olga", "Susana", "Ruth", "Eustaquia", "Josefina", "Úrsula", "Angie",
@@ -60,17 +60,17 @@ public class FuncionesPersona {
                 "Manoli", "Julia", "Rocío", "Marina", "Arelis", "Blanca", "Celeste", "Yolanda",
                 "Noemí", "Nuria", "Carmen", "Sheila", "Lucía", "Alma", "Cristina", "Lucy",
                 "Tamara", "Victoria"};
-            retA = (nombresMujer[r.nextInt(nombresMujer.length)]+" ");
+            retA = (nombresMujer[r.nextInt(nombresMujer.length)] + " ");
         }
         return retA;
 
     }
 
     /**
-     * Esta clase realiza una función ,llamada apellidosAleatorio, que devolverá
-     * un apellido aleatorio entre las opciones que vemos.
+     * Creamos la función apellidosAleatorio, que devolverá un apellido
+     * aleatorio entre las distintas opciones.
      *
-     * @return null
+     * @return retB(apellido aletorio)
      */
     public static String apellidoAleatorio() {
         String retB = "";
@@ -87,10 +87,9 @@ public class FuncionesPersona {
     }
 
     /**
-     * Esta función sin argumentos genera un número entre 0 y 100 y lo
-     * devolverá.
+     * Esta función sin argumentos genera un número entre 0 y 100.
      *
-     * @return
+     * @return el número random creado por sí misma
      */
     public static byte valorEstadisticaAleatorio() {
         Random ran = new Random();
@@ -99,10 +98,10 @@ public class FuncionesPersona {
 
     /**
      * Esta función recibe un argumento numérico llamado min, genera un número
-     * aleatorio entre min y 100 y lo devolverá.
+     * aleatorio entre min y 100.
      *
      * @param min
-     * @return
+     * @return a(número aleatorio entre min y 100 creado por sí misma)
      */
     public static byte valorEstadisticaAleatorio(byte min) {
         Random ran = new Random();
@@ -112,12 +111,12 @@ public class FuncionesPersona {
 
     /**
      * Esta función recibe dos argumentos numéricos, llamados min y max,
-     * generará y devolverá un valor aleatorio entre min y max, con ambos
+     * generará y devolverá un número aleatorio entre min y max, con ambos
      * incluídos.
      *
      * @param min
      * @param max
-     * @return
+     * @return b(número aleatorio entre min y max creado por sí misma)
      */
     public static byte valorEstadisticaAleatorio(byte min, byte max) {
         Random ran = new Random();
@@ -129,15 +128,20 @@ public class FuncionesPersona {
      * Esta función devuelve, concatenada en un String, toda la información de
      * una persona..
      *
-     * @param nombre
-     * @param apellidos
-     * @param genero
-     * @param sociabilidad
-     * @param empatia
-     * @param inteligencia
-     * @param velocidad
-     * @param fuerza
-     * @return
+     * @param nombre (nombre de la persona según su género)
+     * @param apellidos (apellidos de la persona)
+     * @param genero (hombre o mujer)
+     * @param sociabilidad (valor numérico random referente a la sociabilidad de
+     * la persona)
+     * @param empatia(valor numérico random referente a la empatía de la
+     * persona)
+     * @param inteligencia(valor numérico random referente a la inteligencia de
+     * la persona)
+     * @param velocidad(valor numérico random referente a la velocidad de la
+     * persona)
+     * @param fuerza(valor numérico random referente a la fuerza de la persona)
+     * @return retC(el valor de todos los parámetros creados por las funciones
+     * anteriores)
      */
     public static String imprimePersona(String nombre, String apellidos, boolean genero, byte edad, byte sociabilidad,
             byte empatia, byte inteligencia, byte velocidad, byte fuerza) {
