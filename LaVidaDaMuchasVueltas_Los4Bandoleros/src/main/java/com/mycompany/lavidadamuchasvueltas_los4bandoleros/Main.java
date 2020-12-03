@@ -117,43 +117,43 @@ public class Main {
          * Declaramos las variables correspondientes a HERMANO.
          */
         // HERMANO 1
-        Boolean generoHermano1;
-        String nombreHermano1;
-        String apellidosHermano1;
-        byte edadHermano1;
-        String vivoHermano1;
+        Boolean generoHermano1 = false;
+        String nombreHermano1 = "";
+        String apellidosHermano1 = "";
+        byte edadHermano1 = 0;
+        Boolean vivoHermano1;
 
-        byte sociabilidadHermano1;
-        byte empatiaHermano1;
-        byte inteligenciaHermano1;
-        byte velocidadHermano1;
-        byte fuerzaHermano1;
+        byte sociabilidadHermano1 = 0;
+        byte empatiaHermano1 = 0;
+        byte inteligenciaHermano1 = 0;
+        byte velocidadHermano1 = 0;
+        byte fuerzaHermano1 = 0;
 
         // HERMANO 2
-        Boolean generoHermano2;
-        String nombreHermano2;
-        String apellidosHermano2;
-        byte edadHermano2;
-        String vivoHermano2;
+        Boolean generoHermano2 = false;
+        String nombreHermano2 = "";
+        String apellidosHermano2 = "";
+        byte edadHermano2 = 0;
+        Boolean vivoHermano2;
 
-        byte sociabilidadHermano2;
-        byte empatiaHermano2;
-        byte inteligenciaHermano2;
-        byte velocidadHermano2;
-        byte fuerzaHermano2;
+        byte sociabilidadHermano2 = 0;
+        byte empatiaHermano2 = 0;
+        byte inteligenciaHermano2 = 0;
+        byte velocidadHermano2 = 0;
+        byte fuerzaHermano2 = 0;
 
         // HERMANO 3
-        Boolean generoHermano3;
-        String nombreHermano3;
-        String apellidosHermano3;
-        byte edadHermano3;
-        String vivoHermano3;
+        Boolean generoHermano3 = false;
+        String nombreHermano3 = "";
+        String apellidosHermano3 = "";
+        byte edadHermano3 = 0;
+        Boolean vivoHermano3;
 
-        byte sociabilidadHermano3;
-        byte empatiaHermano3;
-        byte inteligenciaHermano3;
-        byte velocidadHermano3;
-        byte fuerzaHermano3;
+        byte sociabilidadHermano3 = 0;
+        byte empatiaHermano3 = 0;
+        byte inteligenciaHermano3 = 0;
+        byte velocidadHermano3 = 0;
+        byte fuerzaHermano3 = 0;
 
         /**
          * A continuación se inicializarán las variables correspondientes a
