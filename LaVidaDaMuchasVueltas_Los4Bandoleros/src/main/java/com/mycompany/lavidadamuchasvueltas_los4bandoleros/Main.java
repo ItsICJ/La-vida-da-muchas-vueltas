@@ -75,15 +75,45 @@ public class Main {
         String vivoYo;
 
         byte sociabilidadYo;
-        byte sociabilidadMaxYo = valorEstadisticaAleatorio((byte) 50, (byte) 100);
+        byte sociabilidadMaxYo;
+        if (sociabilidadPapa > sociabilidadMama) {
+            sociabilidadMaxYo = valorEstadisticaAleatorio((byte) sociabilidadMama, (byte) sociabilidadPapa);
+        } else {
+            sociabilidadMaxYo = valorEstadisticaAleatorio((byte) sociabilidadPapa, (byte) sociabilidadMama);
+        }
+
         byte empatiaYo;
-        byte empatiaMaxYo = valorEstadisticaAleatorio((byte) 50);
+        byte empatiaMaxYo;
+        if (empatiaPapa > empatiaMama) {
+            empatiaMaxYo = valorEstadisticaAleatorio((byte) empatiaMama, (byte) empatiaPapa);
+        } else {
+            empatiaMaxYo = valorEstadisticaAleatorio((byte) empatiaPapa, (byte) empatiaMama);
+        }
+
         byte inteligenciaYo;
-        byte inteligenciaMaxYo = valorEstadisticaAleatorio((byte) 50);
+        byte inteligenciaMaxYo;
+        if (inteligenciaPapa > inteligenciaMama) {
+            inteligenciaMaxYo = valorEstadisticaAleatorio((byte) inteligenciaMama, (byte) inteligenciaPapa);
+        } else {
+            inteligenciaMaxYo = valorEstadisticaAleatorio((byte) inteligenciaPapa, (byte) inteligenciaMama);
+        }
         byte velocidadYo;
-        byte velocidadMaxYo = valorEstadisticaAleatorio((byte) 50);
-        byte fuerzaYO;
-        byte fuerzaMaxYo = valorEstadisticaAleatorio((byte) 50, (byte) 100);
+        byte velocidadMaxYo;
+        if (velocidadPapa > velocidadMama) {
+            velocidadMaxYo = valorEstadisticaAleatorio((byte) velocidadMama, (byte) velocidadPapa);
+
+        } else {
+            velocidadMaxYo = valorEstadisticaAleatorio((byte) velocidadPapa, (byte) velocidadMama);
+
+        }
+        byte fuerzaYo;
+        byte fuerzaMaxYo;
+        if (fuerzaPapa > fuerzaMama) {
+            fuerzaMaxYo = valorEstadisticaAleatorio((byte) fuerzaMama, (byte) fuerzaPapa);
+        } else {
+            fuerzaMaxYo = valorEstadisticaAleatorio((byte) fuerzaPapa, (byte) fuerzaMama);
+
+        }
 
         System.out.println(imprimePersona(nombreYo, apellidosYo, generoYo, edadYo, sociabilidadMaxYo, empatiaMaxYo, inteligenciaMaxYo, velocidadMaxYo, fuerzaMaxYo));
         System.out.println("");
