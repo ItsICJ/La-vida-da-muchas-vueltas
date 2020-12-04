@@ -75,13 +75,13 @@ public class FuncionesPersona {
     public static String apellidoAleatorio() {
         String retB = "";
         Random r = new Random();
-        String[] apellidos = {"Fernández", "De todos los santos", "Heredia", "Aguirre", "Del Piero",
-            "Pérez", "Reverte", "Rojas", "Muñoz", "de la Rosa", "Guiérrez", "Molina", "López", "Romero",
-            "León", "Martínez", "Fernández", "Bas", "Ortega", "Córdoba", "Vega", "Guzmán", "Varo",
-            "Páramos", "Vivo", "Pernas", "García", "Laago", "Pinto", "Pintor", "Delgado", "Vietes",
-            "Portero", "Pestaña", "Guerrero", "Sardà", "Reyes", "Callado", "Santisteban", "Rubio",
+        String[] apellidos = {"Fernández", "Santos", "Heredia", "Aguirre", "del Piero",
+            "Pérez", "Reverte", "Rojas", "Muñoz", "de la Rosa", "Gutiérrez", "Molina", "López", "Romero",
+            "Leon", "Martínez", "Fernández", "Bas", "Ortega", "Córdoba", "Vega", "Guzmán", "Varo",
+            "Páramos", "Vivo", "Pernas", "García", "Lago", "Pinto", "Pintor", "Delgado", "Vietes",
+            "Portero", "Pestaña", "Guerrero", "Sardà", "Reyes", "Callado", "Castillo", "Rubio",
             "Flores", "Carmona", "Gallego", "Ventura", "Melero", "Morales", "Soldado", "Silva",
-            "Hernández", "Ruíz", "Machís", "Duarte", "Díaz", "Vico", "Montoro", "Reyero", "Gamarra"};
+            "Hernández", "Ruíz", "Machís", "Duarte", "Díaz", "Vico", "Montoro", "Reyero", "Jiménez"};
         retB = (apellidos[r.nextInt(apellidos.length)]);
         return retB;
     }
@@ -100,7 +100,7 @@ public class FuncionesPersona {
      * Esta función recibe un argumento numérico llamado min, genera un número
      * aleatorio entre min y 100.
      *
-     * @param min
+     * @param min (será el valor numérico que nosotros indiquemos en Main)
      * @return a(número aleatorio entre min y 100 creado por sí misma)
      */
     public static byte valorEstadisticaAleatorio(byte min) {
@@ -114,8 +114,8 @@ public class FuncionesPersona {
      * generará y devolverá un número aleatorio entre min y max, con ambos
      * incluídos.
      *
-     * @param min
-     * @param max
+     * @param min (será el valor numérico que nosotros indiquemos en Main)
+     * @param max (será el valor numérico que nosotros indiquemos en Main)
      * @return b(número aleatorio entre min y max creado por sí misma)
      */
     public static byte valorEstadisticaAleatorio(byte min, byte max) {
@@ -131,6 +131,7 @@ public class FuncionesPersona {
      * @param nombre (nombre de la persona según su género)
      * @param apellidos (apellidos de la persona)
      * @param genero (hombre o mujer)
+     * @param edad (valor numérico random referente a la edad de cada individuo)
      * @param sociabilidad (valor numérico random referente a la sociabilidad de
      * la persona)
      * @param empatia(valor numérico random referente a la empatía de la

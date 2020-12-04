@@ -37,7 +37,7 @@ public class Main {
         String apellidoPapa2 = apellidoAleatorio();
         String apellidosPapa = apellidoPapa1 + " " + apellidoPapa2;
         byte edadPapa = valorEstadisticaAleatorio((byte) 30, (byte) 100);
-        String vivoPapa;
+        boolean vivoPapa;
 
         byte sociabilidadPapa = valorEstadisticaAleatorio((byte) 50, (byte) 100);
         byte empatiaPapa = valorEstadisticaAleatorio((byte) 50);
@@ -54,7 +54,7 @@ public class Main {
         String apellidoMama2 = apellidoAleatorio();
         String apellidosMama = apellidoMama1 + " " + apellidoMama2;
         byte edadMama = valorEstadisticaAleatorio((byte) 30, (byte) 100);
-        String vivaMama;
+        boolean vivaMama;
 
         byte sociabilidadMama = valorEstadisticaAleatorio((byte) 50, (byte) 100);
         byte empatiaMama = valorEstadisticaAleatorio((byte) 50);
@@ -117,11 +117,11 @@ public class Main {
          * Declaramos las variables correspondientes a HERMANO.
          */
         // HERMANO 1
-        Boolean generoHermano1 = false;
+        boolean generoHermano1 = false;
         String nombreHermano1 = "";
         String apellidosHermano1 = "";
         byte edadHermano1 = 0;
-        Boolean vivoHermano1;
+        boolean vivoHermano1;
 
         byte sociabilidadHermano1 = 0;
         byte empatiaHermano1 = 0;
@@ -130,11 +130,11 @@ public class Main {
         byte fuerzaHermano1 = 0;
 
         // HERMANO 2
-        Boolean generoHermano2 = false;
+        boolean generoHermano2 = false;
         String nombreHermano2 = "";
         String apellidosHermano2 = "";
         byte edadHermano2 = 0;
-        Boolean vivoHermano2;
+        boolean vivoHermano2;
 
         byte sociabilidadHermano2 = 0;
         byte empatiaHermano2 = 0;
@@ -143,11 +143,11 @@ public class Main {
         byte fuerzaHermano2 = 0;
 
         // HERMANO 3
-        Boolean generoHermano3 = false;
+        boolean generoHermano3 = false;
         String nombreHermano3 = "";
         String apellidosHermano3 = "";
         byte edadHermano3 = 0;
-        Boolean vivoHermano3;
+        boolean vivoHermano3;
 
         byte sociabilidadHermano3 = 0;
         byte empatiaHermano3 = 0;
@@ -228,7 +228,7 @@ public class Main {
                 do {
                     opcion = Byte.parseByte(sc.nextLine());
                     if (opcion < 1 || opcion > 5) {
-                        System.out.println("¡Vamos!");
+                        System.out.println("Elige una de las opciones del menú.");
                     }
                 } while (opcion < 1 || opcion > 5);
 
