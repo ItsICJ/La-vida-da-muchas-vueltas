@@ -33,7 +33,7 @@ public class FuncionesPersona {
      * un conjunto de opciones distintas dependiendo de si el género que recibe
      * por argumentos es hombre o mujer
      *
-     * @param genero
+     * @param genero (Verdadero es igual a hombre y falso es mujer)
      * @return retA(nombre de hombre o mujer)
      */
     public static String nombreAleatorio(boolean genero) {

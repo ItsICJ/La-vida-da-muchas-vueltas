@@ -71,7 +71,7 @@ public class Main {
         byte edadYo = 0;
         boolean vivoYo = generoAleatorio();
 
-        byte sociabilidadYo;
+        byte sociabilidadYo = Funciones.FuncionesPersona.valorEstadisticaAleatorio((byte) 0, (byte) 5);
         byte sociabilidadMaxYo;
         if (sociabilidadPapa > sociabilidadMama) {
             sociabilidadMaxYo = valorEstadisticaAleatorio((byte) sociabilidadMama, (byte) sociabilidadPapa);
@@ -79,7 +79,7 @@ public class Main {
             sociabilidadMaxYo = valorEstadisticaAleatorio((byte) sociabilidadPapa, (byte) sociabilidadMama);
         }
 
-        byte empatiaYo;
+        byte empatiaYo = Funciones.FuncionesPersona.valorEstadisticaAleatorio((byte) 0, (byte) 5);
         byte empatiaMaxYo;
         if (empatiaPapa > empatiaMama) {
             empatiaMaxYo = valorEstadisticaAleatorio((byte) empatiaMama, (byte) empatiaPapa);
@@ -87,14 +87,14 @@ public class Main {
             empatiaMaxYo = valorEstadisticaAleatorio((byte) empatiaPapa, (byte) empatiaMama);
         }
 
-        byte inteligenciaYo;
+        byte inteligenciaYo = Funciones.FuncionesPersona.valorEstadisticaAleatorio((byte) 0, (byte) 5);
         byte inteligenciaMaxYo;
         if (inteligenciaPapa > inteligenciaMama) {
             inteligenciaMaxYo = valorEstadisticaAleatorio((byte) inteligenciaMama, (byte) inteligenciaPapa);
         } else {
             inteligenciaMaxYo = valorEstadisticaAleatorio((byte) inteligenciaPapa, (byte) inteligenciaMama);
         }
-        byte velocidadYo;
+        byte velocidadYo = Funciones.FuncionesPersona.valorEstadisticaAleatorio((byte) 0, (byte) 5);;
         byte velocidadMaxYo;
         if (velocidadPapa > velocidadMama) {
             velocidadMaxYo = valorEstadisticaAleatorio((byte) velocidadMama, (byte) velocidadPapa);
@@ -103,7 +103,7 @@ public class Main {
             velocidadMaxYo = valorEstadisticaAleatorio((byte) velocidadPapa, (byte) velocidadMama);
 
         }
-        byte fuerzaYo;
+        byte fuerzaYo = Funciones.FuncionesPersona.valorEstadisticaAleatorio((byte) 0, (byte) 5);
         byte fuerzaMaxYo;
         if (fuerzaPapa > fuerzaMama) {
             fuerzaMaxYo = valorEstadisticaAleatorio((byte) fuerzaMama, (byte) fuerzaPapa);
@@ -209,100 +209,98 @@ public class Main {
          */
         byte opcion = 0;
         Scanner sc = new Scanner(System.in);
-        if (vivoYo) {
-            /**
-             * Este DoWhile te ofrece continuamente un menú de 5 opciones hasta
-             * que elijas la opción 5 que equivale a morir o agluna de las otras
-             * opciones, aunque solamente saldrá del juego elijiendo la opción
-             * 5, las opciones del 1 al 4 tiene objetivos varios que se
-             * explicarán a continuación.
-             */
-            while (opcion != 5) {
-                System.out.println("Elige una opción:"
-                        + "\n\t1 - Impimir mi información."
-                        + "\n\t2 - Imprimir información de mi familia."
-                        + "\n\t3 - Hacer cosas."
-                        + "\n\t4 - Crecer."
-                        + "\n\t5 - Terminar (morir).");
+        /**
+         * Este DoWhile te ofrece continuamente un menú de 5 opciones hasta que
+         * elijas la opción 5 que equivale a morir o agluna de las otras
+         * opciones, aunque solamente saldrá del juego elijiendo la opción 5,
+         * las opciones del 1 al 4 tiene objetivos varios que se explicarán a
+         * continuación.
+         */
+        while (vivoYo) {
+            System.out.println("Elige una opción:"
+                    + "\n\t1 - Impimir mi información."
+                    + "\n\t2 - Imprimir información de mi familia."
+                    + "\n\t3 - Hacer cosas."
+                    + "\n\t4 - Crecer."
+                    + "\n\t5 - Terminar (morir).");
 
-                do {
-                    opcion = Byte.parseByte(sc.nextLine());
-                    if (opcion < 1 || opcion > 5) {
-                        System.out.println("Elige una de las opciones del menú.");
-                    }
-                } while (opcion < 1 || opcion > 5);
-
-                /**
-                 * Cada case de este switch equivale a cada opción del menú.
-                 */
-                switch (opcion) {
-                    /**
-                     * Este case imprime el valor de las variables referentes a
-                     * YO.
-                     */
-                    case 1:
-                        System.out.println(imprimePersona(nombreYo, apellidosYo, generoYo, edadYo, sociabilidadMaxYo, empatiaMaxYo, inteligenciaMaxYo, velocidadMaxYo, fuerzaMaxYo));
-                        System.out.println("");
-                        break;
-
-                    /**
-                     * Este case imprime el valor de las variables referentes a
-                     * PAPA,MAMA y HERMANO(en caso de que tenga).
-                     */
-                    case 2:
-                        System.out.println(imprimePersona(nombrePapa, apellidosPapa, generoPapa, edadPapa, sociabilidadPapa, empatiaPapa, inteligenciaPapa, velocidadPapa, fuerzaPapa));
-                        System.out.println("");
-                        System.out.println(imprimePersona(nombreMama, apellidosMama, generoMama, edadMama, sociabilidadMama, empatiaMama, inteligenciaMama, velocidadMama, fuerzaMama));
-                        System.out.println("");
-                        switch (nHermanos) {
-                            case 0:
-                                System.out.println(imprimePersona(nombreHermano3, apellidosHermano3, generoHermano3, edadHermano3, sociabilidadHermano3, empatiaHermano3, inteligenciaHermano3, velocidadHermano3, fuerzaHermano3));
-                                System.out.println("");
-                                System.out.println(imprimePersona(nombreHermano2, apellidosHermano2, generoHermano2, edadHermano2, sociabilidadHermano2, empatiaHermano2, inteligenciaHermano2, velocidadHermano2, fuerzaHermano2));
-                                System.out.println("");
-                                System.out.println(imprimePersona(nombreHermano1, apellidosHermano1, generoHermano1, edadHermano1, sociabilidadHermano1, empatiaHermano1, inteligenciaHermano1, velocidadHermano1, fuerzaHermano1));
-                                System.out.println("");
-                                break;
-                            case 1:
-                                System.out.println(imprimePersona(nombreHermano2, apellidosHermano2, generoHermano2, edadHermano2, sociabilidadHermano2, empatiaHermano2, inteligenciaHermano2, velocidadHermano2, fuerzaHermano2));
-                                System.out.println("");
-                                System.out.println(imprimePersona(nombreHermano1, apellidosHermano1, generoHermano1, edadHermano1, sociabilidadHermano1, empatiaHermano1, inteligenciaHermano1, velocidadHermano1, fuerzaHermano1));
-                                System.out.println("");
-                                break;
-                            case 2:
-                                System.out.println(imprimePersona(nombreHermano1, apellidosHermano1, generoHermano1, edadHermano1, sociabilidadHermano1, empatiaHermano1, inteligenciaHermano1, velocidadHermano1, fuerzaHermano1));
-                                System.out.println("");
-                                break;
-                        }
-                        break;
-
-                    /**
-                     * No tenemos nociones de lo que hace este case.
-                     */
-                    case 3:
-
-                        break;
-
-                    /**
-                     * Este case incrementa la edad de todos más uno.
-                     */
-                    case 4:
-                        edadPapa++;
-                        edadMama++;
-                        edadYo++;
-                        break;
-
-                    /**
-                     * Este case finaliza el juego, bueno tu elejiste morir así
-                     * que...
-                     */
-                    case 5:
-                        System.out.println("Suicidiiiioooo");
-                        break;
-
+            do {
+                opcion = Byte.parseByte(sc.nextLine());
+                if (opcion < 1 || opcion > 5) {
+                    System.out.println("Elige una de las opciones del menú.");
                 }
-            }
-        }
+            } while (opcion < 1 || opcion > 5);
 
+            /**
+             * Cada case de este switch equivale a cada opción del menú.
+             */
+            switch (opcion) {
+
+                case 1 -> {
+                    System.out.println(imprimePersona(nombreYo, apellidosYo, generoYo, edadYo, sociabilidadMaxYo, empatiaMaxYo, inteligenciaMaxYo, velocidadMaxYo, fuerzaMaxYo));
+                    System.out.println("");
+                }
+
+                case 2 -> {
+                    System.out.println(imprimePersona(nombrePapa, apellidosPapa, generoPapa, edadPapa, sociabilidadPapa, empatiaPapa, inteligenciaPapa, velocidadPapa, fuerzaPapa));
+                    System.out.println("");
+                    System.out.println(imprimePersona(nombreMama, apellidosMama, generoMama, edadMama, sociabilidadMama, empatiaMama, inteligenciaMama, velocidadMama, fuerzaMama));
+                    System.out.println("");
+                    switch (nHermanos) {
+                        case 0 -> {
+                            System.out.println(imprimePersona(nombreHermano3, apellidosHermano3, generoHermano3, edadHermano3, sociabilidadHermano3, empatiaHermano3, inteligenciaHermano3, velocidadHermano3, fuerzaHermano3));
+                            System.out.println("");
+                            System.out.println(imprimePersona(nombreHermano2, apellidosHermano2, generoHermano2, edadHermano2, sociabilidadHermano2, empatiaHermano2, inteligenciaHermano2, velocidadHermano2, fuerzaHermano2));
+                            System.out.println("");
+                            System.out.println(imprimePersona(nombreHermano1, apellidosHermano1, generoHermano1, edadHermano1, sociabilidadHermano1, empatiaHermano1, inteligenciaHermano1, velocidadHermano1, fuerzaHermano1));
+                            System.out.println("");
+                    }
+                        case 1 -> {
+                            System.out.println(imprimePersona(nombreHermano2, apellidosHermano2, generoHermano2, edadHermano2, sociabilidadHermano2, empatiaHermano2, inteligenciaHermano2, velocidadHermano2, fuerzaHermano2));
+                            System.out.println("");
+                            System.out.println(imprimePersona(nombreHermano1, apellidosHermano1, generoHermano1, edadHermano1, sociabilidadHermano1, empatiaHermano1, inteligenciaHermano1, velocidadHermano1, fuerzaHermano1));
+                            System.out.println("");
+                    }
+                        case 2 -> {
+                            System.out.println(imprimePersona(nombreHermano1, apellidosHermano1, generoHermano1, edadHermano1, sociabilidadHermano1, empatiaHermano1, inteligenciaHermano1, velocidadHermano1, fuerzaHermano1));
+                            System.out.println("");
+                    }
+                    }
+                }
+
+                case 3 -> {
+                }
+
+                case 4 -> {
+                    edadPapa++;
+                    edadMama++;
+                    edadYo++;
+                }
+
+                case 5 -> {
+                    System.out.println("Suicidiiiioooo");
+                    vivoYo = false;
+                }
+
+            }
+            /**
+             * Este case imprime el valor de las variables referentes a YO.
+             */
+            /**
+             * Este case imprime el valor de las variables referentes a
+             * PAPA,MAMA y HERMANO(en caso de que tenga).
+             */
+            /**
+             * No tenemos nociones de lo que hace este case.
+             */
+            /**
+             * Este case incrementa la edad de todos más uno.
+             */
+            /**
+             * Este case finaliza el juego, bueno tu elejiste morir así
+             * que...
+             */
+                    }
     }
+
 }
